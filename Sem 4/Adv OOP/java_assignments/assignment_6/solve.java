@@ -65,7 +65,7 @@ class Patient {
 	// method to receive patient details
 	public void getData () {
 		Scanner sc = new Scanner (System.in);
-		System.out.print ("\nEnter name: ");
+		System.out.print ("\nEnter patient name: ");
 		name = sc.nextLine ();
 
 		System.out.print ("Enter age: ");
@@ -112,7 +112,7 @@ class Doctor {
 	public void getData () {
 		Scanner sc = new Scanner (System.in);
 
-		System.out.print ("\nEnter name: ");
+		System.out.print ("\nEnter doctor name: ");
 		name = sc.nextLine ();
 
 		System.out.print ("Enter qualification: ");
@@ -121,7 +121,7 @@ class Doctor {
 
 	// method to display details of a doctor
 	public void showData () {
-		System.out.println ("Name : " + name + "\tQualification: "+ qual);
+		System.out.println ("Name : " + name + "\tQualification: "+ qual + "\n");
 	}
 }
 
@@ -265,17 +265,17 @@ class Hospital {
 	// method to display patient list assigned to a doctor
 	void displayPatientListAssignedToDoctor () {
 		Scanner sc = new Scanner (System.in);
-		System.out.print ("Enter Doctor ID: ");
+		System.out.print ("\nEnter Doctor ID: ");
 		String did = sc.nextLine ();			// input the doctor ID
 
 		if (dlist.containsKey(did)) {			// if the doctor is registered
-			System.out.println ("\nDoctor ID :- " + did);
+			System.out.println ("\nDoctor ID :- " + did + "\tName :- " + dlist.get(did).retName());
 			ArrayList <String> pid_list = assign.get(did);			// get the patient list form the assign map
 			
 			if (pid_list.isEmpty())				// if patient list is empty
 				System.out.println ("No patients assigned.\n");
 			else {
-				System.out.println ("\nPatients assigned [count: " + pid_list.size() + "] -->");
+				System.out.println ("\nPatients assigned [count: " + pid_list.size() + "] -->\n");
 				for (String pid: assign.get(did)) {				// traverse the patient list
 					System.out.println ("Patient ID :- " + pid);
 					plist.get(pid).showData ();
@@ -290,7 +290,7 @@ class Hospital {
 	// method to display list of all patients registered in the hospital
 	void displayPatientList () {
 		if (plist.isEmpty())			// if the list is empty
-			System.out.println ("\nNo patients registered yet.\n");
+			System.out.println ("\nRegistered Patient list is empty.\n");
 		else {
 			System.out.println ("\nPatient List [count: " + plist.size() + "] -->");
 			for (Map.Entry<String,Patient> entry : plist.entrySet()) {		// traverse the list
@@ -304,9 +304,9 @@ class Hospital {
 	// method to display list of all doctors registered in the hospital
 	void displayDoctorList () {
 		if (dlist.isEmpty())			// if the list is empty
-			System.out.println ("\nNo doctors registered yet.\n");
+			System.out.println ("\nRegistered Doctor list is empty.\n");
 		else {
-			System.out.println ("\nDoctor List [count: " + dlist.size() + "] -->");
+			System.out.println ("\nDoctor List [count: " + dlist.size() + "] -->\n");
 			for (Map.Entry<String,Doctor> entry : dlist.entrySet()) {		// traverse the list
 				System.out.println ("Doctor ID :- " + entry.getKey());
 				entry.getValue ().showData();			// display doctor details
@@ -318,15 +318,23 @@ class Hospital {
 	// method to deregister a patient
 	void removePatient () {
 		Scanner sc = new Scanner (System.in);
+
+		// if list is empty
+		if (plist.isEmpty()) {
+			System.out.println ("\nRegistered Patient list is empty.\n");
+			return;
+		}
+		
 		System.out.print ("\nEnter Patient ID: ");
 		String pid = sc.nextLine ();		// input the patient ID
 
 		if (plist.containsKey(pid)) {		// if the patient is registered
-			plist.remove (pid);				// remove the patient from patient list
 			String did = searchDoctorOfPatient (pid);
 			if (did != null)				// if the patient was assigned to any doctor
 				assign.get (did).remove(pid);			// remove from the patient list assigned to that doctor
+				
 			System.out.println ("Patient " + plist.get (pid).retName () + " [ID: " + pid + "] removed successfully.\n");
+			plist.remove (pid);				// remove the patient from patient list
 		}
 		else
 			System.out.println ("Sorry, patient not registered.\n");
@@ -339,7 +347,7 @@ class Solve {
         Hospital H = new Hospital ();
         char op = 'n';
         do {
-        	System.out.print ("\nMain Menu -->\n1. Add Patient\n2. Add Doctor\n3. Display Patient by ID\n4. Display Doctor by ID\n5. Assign Patient to a Doctor\n6. Record Observations for a patient\n7. View Patient List\n8. View Doctor List\n9. View Patient List allocated to a Doctor\n10. Remove a Patient\nEnter your choice: ");
+        	System.out.print ("\nMain Menu -->\n1. Register Patient\n2. Register Doctor\n3. Display Patient by ID\n4. Display Doctor by ID\n5. Assign Patient to a Doctor\n6. Record Observations for a patient\n7. View Patient List\n8. View Doctor List\n9. View Patient List allocated to a Doctor\n10. Remove a Patient\nEnter your choice: ");
         	int ch = sc.nextInt();
 
         	switch (ch) {

@@ -55,7 +55,8 @@ class Solve {
 
 		boolean flag = true;
 
-		for (char cStream: txt.toCharArray ()) {
+		try {
+			for (char cStream: txt.toCharArray ()) {
 			char cStack = s.top ();
 
 			// if character at the top of stack is sentinel or both characters are opening braces
@@ -73,9 +74,17 @@ class Solve {
 			}
 		}
 
-		if (flag && s.empty())
+		if (txt.isEmpty())
+			System.out.println ("Empty string.\n");
+
+		else if (flag && s.empty())
 			System.out.println ("Parentheses properly balanced.");
 		else
 			System.out.println ("Parentheses not properly balanced.");
+		}
+
+		catch (Exception e) {		// in case of wrong input
+			System.out.println ("Invalid expression.\n");
+		}
 	}
 }

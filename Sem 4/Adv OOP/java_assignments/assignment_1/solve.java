@@ -41,7 +41,7 @@ class Student {
 			return true;
 		}
 		catch (Exception e) {
-			System.out.println ("Invalid Date Format.\n");
+			System.out.println ("Invalid Date.\n");
 			return false;
 		}
 	}
@@ -67,7 +67,10 @@ class Student {
 	public void printMarksheet () {
 		System.out.println ("Roll: " + roll + "		Name: " + name);
 		System.out.println ("Course: " + course);
-		System.out.println ("Admission Date: " + admission_date);
+
+		// format the date pattern as desired
+		String formatted_date = admission_date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
+		System.out.println ("Admission Date: " + formatted_date);
 		
 		System.out.println ("Marks in 5 subjects: ");
 		for (float m: marks)
@@ -192,7 +195,7 @@ class StudentList {
 
 	// method to display total number of students
 	public void displayStudentCount () {
-		System.out.println ("\nNo of students registered: " + list.size() + "\n");
+		System.out.println ("\nNo of students registered in University: " + list.size() + "\n");
 	}
 
 	// method to display marksheet of a particular student by roll number
@@ -230,6 +233,8 @@ class StudentList {
 				rs.printMarksheet();	// print the details of the student
 				System.out.println ("\n");
 			}
+
+			System.out.println ("-----------------X-----------------\n");
 		}
 
 		else
@@ -237,17 +242,25 @@ class StudentList {
 	}
 
 	// method to remove a student from the all students' list
-	public void removeStudent (String r) {
-		Iterator <RegisteredStudent> it = list.iterator ();
-		while (it.hasNext()) {
-			RegisteredStudent rs = it.next();
-			if (rs.checkEqualityOfRoll(r)) {	// if a student with the roll number exists
-				it.remove();	// remove the student from list
-				System.out.println ("\nStudent with roll number " + r + " removed successfully.\n");
-				return;
+	public void removeStudent () {
+		if (list.isEmpty())
+			System.out.println ("\nStudent List is empty.\n");
+		else {
+			Scanner sc = new Scanner (System.in);
+			System.out.print ("\nEnter roll number: ");
+			String rollno = sc.nextLine ();		// input the roll no
+
+			Iterator <RegisteredStudent> it = list.iterator ();
+			while (it.hasNext()) {
+				RegisteredStudent rs = it.next();
+				if (rs.checkEqualityOfRoll(rollno)) {	// if a student with the roll number exists
+					it.remove();	// remove the student from list
+					System.out.println ("\nStudent with roll number " + rollno + " removed successfully.\n");
+					return;
+				}
 			}
+			System.out.println ("Student could not be found.\n");
 		}
-		System.out.println ("Student could not be found.\n");
 	}
 }
 
@@ -257,8 +270,9 @@ class Solve {
         Scanner sc = new Scanner (System.in);
         String rollno, deptname;
         char op = 'n';
+        Runtime r = Runtime.getRuntime();
         do {
-        	System.out.print ("\nMain Menu -->\n1. Add Student\n2. Display Marksheet of a Student by Roll\n3. Sort students of a Department by marks\n4. Remove a Student\n5. View Total no. of students\n6. Call Garbage Collector\n7. Show Free Memory\nEnter your choice: ");
+        	System.out.print ("\nMain Menu -->\n1. Add Student\n2. Display Marksheet of a Student by Roll\n3. Display sort list of students of a Department by marks\n4. Remove a Student\n5. View Total no. of students\n6. Call Garbage Collector\n7. Show Free Memory\nEnter your choice: ");
         	int ch = sc.nextInt();
 
         	switch (ch) {
@@ -276,11 +290,7 @@ class Solve {
 						s.displaySortedList(deptname);
 						break;
 
-        		case 4: System.out.print ("\nEnter roll number: ");
-        				sc.skip ("\\s*");
-						rollno = sc.nextLine ();
-						s.removeStudent(rollno);
-						break;
+        		case 4: s.removeStudent(); break;
 
         		case 5: s.displayStudentCount(); break;
 
@@ -288,8 +298,7 @@ class Solve {
         				System.out.println ("\nGarbage Collector called.\n");
         				break;
 
-        		case 7: Runtime r = Runtime.getRuntime();
-        				System.out.println ("\nFree Memory:- " + r.freeMemory() + "\n");
+        		case 7: System.out.println ("\nFree Memory:- " + r.freeMemory() + "\n");
         				break;
 
         		default: System.out.println ("\nWrong choice.");

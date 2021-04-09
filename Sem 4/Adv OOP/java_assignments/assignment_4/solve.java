@@ -1,13 +1,13 @@
-package assignment_4;
-
 // import necessary packages to use built-in classes as required
-import java.util.Random;
+import java.util.*;
+import java.time.*;
+import java.time.format.*;
 
 class QuoteOfTheDay {
-	public static void main (String[] args) {
+    public static void main (String[] args) {
 
-		// 1d array to store the hard-coded strings
-		String []quote = new String[] {
+        // 1d array to store the hard-coded strings
+        String []quote = new String[] {
             "'You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.'--Madeleine L'Engle",
             "'If you don't have time to read, you don't have the time (or the tools) to write. Simple as that.'--Stephen King",
             "'We write to taste life twice, in the moment and in retrospect.'--Anaïs Nin",
@@ -41,8 +41,22 @@ class QuoteOfTheDay {
             "'When you make music or write or create, it's really your job to have mind-blowing, irresponsible, condomless sex with whatever idea it is you're writing about at the time.'--Lady Gaga" 
         };
 
+        Map <LocalDate, String> hm = new HashMap <LocalDate, String> ();        // map to store special quotes as per special dates
+        DateTimeFormatter format = DateTimeFormatter.ofPattern ("dd-MM-yyyy");
+
+        // some hard-coded special dates
+        hm.put (LocalDate.parse ("15-08-1945", format), "'We are free.' --Indians");
+        hm.put (LocalDate.parse ("09-04-2021", format), "'Its 9th April' --Anonymous");
+
+        LocalDate today = LocalDate.now();      // get current date from system
+        for (Map.Entry<LocalDate, String> entry : hm.entrySet()) {
+            if (hm.containsKey (today)) {
+                System.out.println (hm.get(today));     // if special date available, show it
+                return;
+            }
+        }
         Random rand = new Random ();
-        int i = rand.nextInt (quote.length);	// generate a random index in the range 0 to length-1 inclusive
+        int i = rand.nextInt (quote.length);    // generate a random index in the range 0 to length-1 inclusive
         System.out.println (quote[i]);
-	}
+    }
 }
