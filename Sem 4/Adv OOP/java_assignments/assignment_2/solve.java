@@ -42,12 +42,12 @@ class ItemDetails {
 	}
 
 	// method to return rate of an item
-	public float returnRate () {
+	public float getRate () {
 		return rate;
 	}
 
-	// method to get the input for details of a new item
-	public void getData (String pref, char mode) throws NegativeIntegerException {
+	// method to set the input details of a new item
+	public void setData (String pref, char mode) throws NegativeIntegerException {
 		Scanner sc = new Scanner (System.in);
 
 		if (mode == 'n') {			// if new item is being added, else stocks are added to existing item
@@ -157,11 +157,11 @@ class ItemList {
 				char ch = sc.next().charAt(0);
 				if (ch == 'y' || ch == 'Y') {
 					idet = list.get (icode_pref);
-					idet.getData (icode_pref, 'e');			// get data for existing item
+					idet.setData (icode_pref, 'e');			// get data for existing item
 				}
 			}
 			else {		// if the list does not contain the item
-				idet.getData (icode_pref, 'n');
+				idet.setData (icode_pref, 'n');
 				abbrev.put (icode_pref, iname);
 				list.put (icode_pref, idet);				// put the item in the list
 			}
@@ -252,7 +252,7 @@ class ItemList {
 		else {
 			ArrayList <String> items = new ArrayList <String> ();
 			for (Map.Entry<String,ItemDetails> entry : list.entrySet())
-				if (entry.getValue().returnRate() > amount)
+				if (entry.getValue().getRate() > amount)
 					items.add (entry.getKey());			// add item prefices to the list if cost is higher than the given amount
 
 			if (items.isEmpty())				// if there are no items with cost above the given amount

@@ -47,7 +47,7 @@ class Student {
 	}
 
 	// method to compute and return total marks
-	public float returnTotalMarks () {
+	public float getTotalMarks () {
 		float total = 0;
 		for (float m: marks)
 			total = total + m;
@@ -55,7 +55,7 @@ class Student {
 	}
 
 	// method to accept marks in 5 subjects out of 100
-	public void receiveMarks () {
+	public void setMarks () {
 		System.out.print("Enter marks in 5 subjects: ");
 		Scanner sc = new Scanner (System.in);
 		
@@ -76,7 +76,7 @@ class Student {
 		for (float m: marks)
 			System.out.print (m + " ");
 
-		float total_marks = returnTotalMarks();		// compute total marks
+		float total_marks = getTotalMarks();		// compute total marks
 		System.out.println ("\nTotal marks = " + total_marks + "	Percentage = " + (total_marks / 5));
 	}
 
@@ -168,7 +168,7 @@ class RegisteredStudent extends Student implements Comparable <RegisteredStudent
 	// method to compare two students based on their total marks
 	@Override
 	public int compareTo (RegisteredStudent rs) {
-		return (Float.compare (rs.returnTotalMarks(), returnTotalMarks()));
+		return (Float.compare (rs.getTotalMarks(), getTotalMarks()));
 	}
 }
 
@@ -185,7 +185,7 @@ class StudentList {
 	public void addStudent () {
 		RegisteredStudent rs = new RegisteredStudent ();
 		if (rs.getAdmission ()) {
-			rs.receiveMarks ();
+			rs.setMarks ();
 			list.add(rs);		// add the new student to the list
 			System.out.println ("Student added successfully.\n");
 		}
@@ -272,7 +272,7 @@ class Solve {
         char op = 'n';
         Runtime r = Runtime.getRuntime();
         do {
-        	System.out.print ("\nMain Menu -->\n1. Add Student\n2. Display Marksheet of a Student by Roll\n3. Display sort list of students of a Department by marks\n4. Remove a Student\n5. View Total no. of students\n6. Call Garbage Collector\n7. Show Free Memory\nEnter your choice: ");
+        	System.out.print ("\nMain Menu -->\n1. Add Student\n2. Display Marksheet of a Student by Roll\n3. Display sorted list of students of a Department by marks\n4. Remove a Student\n5. View Total no. of students\n6. Call Garbage Collector\n7. Show Free Memory\nEnter your choice: ");
         	int ch = sc.nextInt();
 
         	switch (ch) {

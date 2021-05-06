@@ -3,11 +3,11 @@ import java.util.*;
 import java.time.*;
 import java.time.format.*;
 
-class QuoteOfTheDay {
-    public static void main (String[] args) {
+class GeneralQuotes {
+    private String quote[];         // 1d array to store the general quotes
 
-        // 1d array to store the hard-coded strings
-        String []quote = new String[] {
+    GeneralQuotes () {
+        quote = new String[] {
             "'You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.'--Madeleine L'Engle",
             "'If you don't have time to read, you don't have the time (or the tools) to write. Simple as that.'--Stephen King",
             "'We write to taste life twice, in the moment and in retrospect.'--Anaïs Nin",
@@ -40,23 +40,55 @@ class QuoteOfTheDay {
             "'Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish.'― Hermann Hesse",
             "'When you make music or write or create, it's really your job to have mind-blowing, irresponsible, condomless sex with whatever idea it is you're writing about at the time.'--Lady Gaga" 
         };
+    }
 
-        Map <LocalDate, String> hm = new HashMap <LocalDate, String> ();        // map to store special quotes as per special dates
-        DateTimeFormatter format = DateTimeFormatter.ofPattern ("dd-MM-yyyy");
-
-        // some hard-coded special dates
-        hm.put (LocalDate.parse ("15-08-1945", format), "'We are free.' --Indians");
-        hm.put (LocalDate.parse ("09-04-2021", format), "'Its 9th April' --Anonymous");
-
-        LocalDate today = LocalDate.now();      // get current date from system
-        for (Map.Entry<LocalDate, String> entry : hm.entrySet()) {
-            if (hm.containsKey (today)) {
-                System.out.println (hm.get(today));     // if special date available, show it
-                return;
-            }
-        }
+    // method to get a random general quote
+    public String getGeneralQuote () {
+        if (quote.length == 0)      // if list of general quotes is empty
+            return "";
         Random rand = new Random ();
         int i = rand.nextInt (quote.length);    // generate a random index in the range 0 to length-1 inclusive
-        System.out.println (quote[i]);
+        return (quote[i]);
+    }
+
+}
+
+class SpecialQuotes {
+    private Map <LocalDate, String> hm;      // map to store special quotes as per special dates
+
+    SpecialQuotes () {
+        hm = new HashMap <LocalDate, String> ();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern ("dd-MM-yyyy");      // specify the date format to be used as key in the map
+
+        // some hard-coded quotes for special dates
+        hm.put (LocalDate.parse ("15-08-1945", format), "'Freedom is never dear at any price. It is the breath of life. What would a man not pay for living?' --Mahatma Gandhi");
+        hm.put (LocalDate.parse ("22-04-1970", format), "'I only feel angry when I see waste. When I see people throwing away things we could use.' --Mother Teresa");
+        hm.put (LocalDate.parse ("25-12-0001", format), "'Love your enemies! Pray for those who persecute you! In that way, you will be acting as true children of your Father in heaven. For he gives his sunlight to both the evil and the good, and he sends rain on the just and the unjust alike.' --Jesus Christ");
+    }
+
+    // method to get a special quote based on the current date
+    public String getSpecialQuote (LocalDate today) {
+        for (Map.Entry<LocalDate, String> entry : hm.entrySet()) {
+            LocalDate k = entry.getKey ();
+            if (k.getMonth() == today.getMonth() && k.getDayOfMonth() == today.getDayOfMonth())
+                return (entry.getValue());     // if special date available, return it
+        }
+        return "";      // if not special date, return empty string
+    }
+}
+
+class QuoteOfTheDay {
+    public static void main (String[] args) {
+        SpecialQuotes sq = new SpecialQuotes ();
+        LocalDate today = LocalDate.now();      // get current date from system
+        String q = sq.getSpecialQuote (today);
+        
+        // if special quote exists
+        if (q.length() > 0)
+            System.out.println (q);         // print special quote
+        else {
+            GeneralQuotes gq = new GeneralQuotes ();
+            System.out.println (gq.getGeneralQuote());      // print general quote
+        }
     }
 }

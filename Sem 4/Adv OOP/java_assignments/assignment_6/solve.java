@@ -13,7 +13,7 @@ class TestResults {
 	private float temp;
 
 	// method to input information regarding tests on a patient and record them
-	public void getData () {
+	public void setData () {
 		Scanner sc = new Scanner (System.in);
 		System.out.print ("\nEnter weight: ");
 		weight = sc.nextInt ();
@@ -48,7 +48,7 @@ class Patient {
 	}
 
 	// method to return assign status
-	public boolean retAssignStatus () {
+	public boolean getAssignStatus () {
 		return assn_stat;
 	}
 
@@ -58,12 +58,12 @@ class Patient {
 	}
 
 	// method to return name of patient
-	public String retName () {
+	public String getName () {
 		return name;
 	}
 
 	// method to receive patient details
-	public void getData () {
+	public void setData () {
 		Scanner sc = new Scanner (System.in);
 		System.out.print ("\nEnter patient name: ");
 		name = sc.nextLine ();
@@ -82,7 +82,7 @@ class Patient {
 		System.out.println ("\nPatient Info -->");
 		showData ();
 		TestResults tr = new TestResults ();
-		tr.getData();		// record test data
+		tr.setData();		// record test data
 		tr_list.add (tr);		// add to the list
 	}
 
@@ -104,12 +104,12 @@ class Doctor {
 	private String qual;		// qualification of doctor
 
 	// method to return name of doctor
-	public String retName () {
+	public String getName () {
 		return name;
 	}
 
 	// method to recieve details of doctor
-	public void getData () {
+	public void setData () {
 		Scanner sc = new Scanner (System.in);
 
 		System.out.print ("\nEnter doctor name: ");
@@ -157,7 +157,7 @@ class Hospital {
 	// method to add a patient to the list
 	void addPatient () {
 		Patient p = new Patient ();
-		p.getData ();							// input patient details
+		p.setData ();							// input patient details
 		String pid = getNextId (last_pid);		// compute next id
 		plist.put (pid, p);						// add patient to list
 		last_pid = pid;							// update last id
@@ -167,7 +167,7 @@ class Hospital {
 	// method to add a doctor to the list
 	void addDoctor () {
 		Doctor d = new Doctor ();
-		d.getData ();							// input doctor details
+		d.setData ();							// input doctor details
 		String did = getNextId (last_did);		// compute next id
 		dlist.put (did, d);						// add doctor to list
 		last_did = did;							// update last id
@@ -195,9 +195,9 @@ class Hospital {
 			System.out.println ("\nPatient ID :- " + pid);
 			Patient p = plist.get(pid);			// fetch the details from the list
 			p.showData();
-			if (p.retAssignStatus()) {			// if doctor is assigned
+			if (p.getAssignStatus()) {			// if doctor is assigned
 				String did = searchDoctorOfPatient(pid);
-				System.out.println ("Doctor assigned :- " + dlist.get(did).retName());
+				System.out.println ("Doctor assigned :- " + dlist.get(did).getName());
 			}
 			else
 				System.out.println ("Doctor not assigned.");
@@ -234,13 +234,13 @@ class Hospital {
 			if (dlist.containsKey(did)) {		// if the doctor is registered
 				String old_did = searchDoctorOfPatient (pid);
 				if (old_did != null) {			// if the patient is already assigned to a doctor
-					System.out.println ("Patient was previously assigned to " + dlist.get(old_did).retName() + " [ID: " + old_did + "].");
+					System.out.println ("Patient was previously assigned to " + dlist.get(old_did).getName() + " [ID: " + old_did + "].");
 					assign.get (old_did).remove (pid);			// unmap the patient ID from the previous doctor ID
 				}
 				assign.get (did).add (pid);			// map the patient ID to the desired doctor ID
 				plist.get (pid).setAssignStatus (true);
 
-				System.out.println ("Patient " + plist.get (pid).retName () + " [ID: " + pid + "] now assigned to " + dlist.get(did).retName() + " [ID: " + did + "].\n");
+				System.out.println ("Patient " + plist.get (pid).getName () + " [ID: " + pid + "] now assigned to " + dlist.get(did).getName() + " [ID: " + did + "].\n");
 			}
 			else
 				System.out.println ("Sorry, doctor not registered.\n");
@@ -269,7 +269,7 @@ class Hospital {
 		String did = sc.nextLine ();			// input the doctor ID
 
 		if (dlist.containsKey(did)) {			// if the doctor is registered
-			System.out.println ("\nDoctor ID :- " + did + "\tName :- " + dlist.get(did).retName());
+			System.out.println ("\nDoctor ID :- " + did + "\tName :- " + dlist.get(did).getName());
 			ArrayList <String> pid_list = assign.get(did);			// get the patient list form the assign map
 			
 			if (pid_list.isEmpty())				// if patient list is empty
@@ -333,7 +333,7 @@ class Hospital {
 			if (did != null)				// if the patient was assigned to any doctor
 				assign.get (did).remove(pid);			// remove from the patient list assigned to that doctor
 				
-			System.out.println ("Patient " + plist.get (pid).retName () + " [ID: " + pid + "] removed successfully.\n");
+			System.out.println ("Patient " + plist.get (pid).getName () + " [ID: " + pid + "] removed successfully.\n");
 			plist.remove (pid);				// remove the patient from patient list
 		}
 		else
