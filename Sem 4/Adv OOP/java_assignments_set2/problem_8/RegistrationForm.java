@@ -227,9 +227,9 @@ class RegistrationForm extends JFrame{
         dbox.add(gradeLabel, constraints);
         constraints.gridx = 1; constraints.gridy = 3;
         dbox.add(A_Button, constraints);
-        constraints.gridx = 2; constraints.gridy = 3;
+        constraints.gridx = 1; constraints.gridy = 4;
         dbox.add(B_Button, constraints);
-        constraints.gridx = 3; constraints.gridy = 3;
+        constraints.gridx = 1; constraints.gridy = 5;
         dbox.add(C_Button, constraints);
         gradeBg.add(A_Button);
         gradeBg.add(B_Button);
@@ -306,7 +306,7 @@ class RegistrationForm extends JFrame{
         boolean inList = false;
         String st = searchField.getText();
         if(isEmployeeIdInList (searchField.getText()) == false){
-            JOptionPane.showMessageDialog(this, "Error: Enter a valid id!","Alert",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error: ID not found!","Alert",JOptionPane.WARNING_MESSAGE);
             searchField.setText("");
             return;
         }else{
@@ -323,7 +323,7 @@ class RegistrationForm extends JFrame{
         }
 
         if(inList == false){
-            JOptionPane.showMessageDialog(this, "Error: Enter a valid id!","Alert",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error: ID not found!","Alert",JOptionPane.WARNING_MESSAGE);
         }
     }
 
