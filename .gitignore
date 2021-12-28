@@ -47,3 +47,9 @@
 
 # Java class files
 *.class
+
+# Python cache files
+*.pyc
+
+# Qt user files
+*.user 
