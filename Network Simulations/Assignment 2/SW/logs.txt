@@ -1,0 +1,56 @@
+Sender: Oggy ----------------------- Receiver: Jack
+Total frames sent = 67
+Effective frames sent = 46
+Total time taken = 52 seconds
+Throughput = 501 bps
+Utilization percentage = 12.53 %
+Transmission time = 1.14963 seconds/packet
+
+Sender: Tom ----------------------- Receiver: Jerry
+Total frames sent = 77
+Effective frames sent = 46
+Total time taken = 73 seconds
+Throughput = 361 bps
+Utilization percentage = 9.05 %
+Transmission time = 1.59175 seconds/packet
+
+Sender: Woz ----------------------- Receiver: Jobs
+Total frames sent = 76
+Effective frames sent = 46
+Total time taken = 67 seconds
+Throughput = 394 bps
+Utilization percentage = 9.87 %
+Transmission time = 1.45888 seconds/packet
+
+Sender: Oggy ----------------------- Receiver: Jack
+Total frames sent = 65
+Effective frames sent = 46
+Total time taken = 48 seconds
+Throughput = 546 bps
+Utilization percentage = 13.66 %
+Transmission time = 1.05433 seconds/packet
+
+Sender: Tom ----------------------- Receiver: Jerry
+Total frames sent = 70
+Effective frames sent = 46
+Total time taken = 58 seconds
+Throughput = 450 bps
+Utilization percentage = 11.26 %
+Transmission time = 1.27854 seconds/packet
+
+Sender: tester2 ----------------------- Receiver: tester1
+Total frames sent = 58
+Effective frames sent = 46
+Total time taken = 32 seconds
+Throughput = 803 bps
+Utilization percentage = 20.10 %
+Transmission time = 0.71644 seconds/packet
+
+Sender: tester2 ----------------------- Receiver: tester1
+Total frames sent = 75
+Effective frames sent = 46
+Total time taken = 65 seconds
+Throughput = 403 bps
+Utilization percentage = 10.09 %
+Transmission time = 1.42732 seconds/packet
+

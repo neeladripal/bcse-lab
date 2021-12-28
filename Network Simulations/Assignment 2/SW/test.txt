@@ -1,0 +1,28 @@
+Implement three data link layer protocols, Stop and Wait, Go Back N Sliding
+Window and Selective Repeat Sliding Window for flow control.
+Submission due: Go your way, just get it done
+Sender, Receiver and Channel all are independent processes. There may be multiple Transmitter and
+Receiver processes, but only one Channel process. The channel process introduces random delay and/or
+bit error while transferring frames. Define your own frame format or you may use IEEE 802.3 Ethernet
+frame format.
+Hints: Some points you may consider in your design.
+Following functions may be required in Sender.
+Send: This function, invoked every time slot at the sender, decides if the sender should (1) do nothing,
+(2) retransmit the previous data frame due to a timeout, or (3) send a new data frame. Also, you have to
+consider current network time measure in time slots.
+Recv_Ack: This function is invoked whenever an ACK packet is received. Need to consider network time
+when the ACK was received, ack_num and timestamp are the sender's sequence number and timestamp
+that were echoed in the ACK. This function must call the timeout function.
+Timeout: This function should be called by ACK method to compute the most recent data packet's
+round-trip time and then re-compute the value of timeout.
+Following functions may be required in Receiver.
+Recv: This function at the receiver is invoked upon receiving a data frame from the sender.
+Send_Ack: This function is required to build the ACK and transmit.
+Sliding window:
+The sliding window protocols (Go-Back-N and Selective Repeat) extend the stop-and-wait protocol by
+allowing the sender to have multiple frames outstanding (i.e., unacknowledged) at any given time. The
+maximum number of unacknowledged frames at the sender cannot exceed its "window size". Upon
+receiving a frame, the receiver sends an ACK for the frame's sequence number. The receiver then
+buffers the received frames and delivers them in sequence number order to the application.
+Performance metrics: Receiver Throughput (packets per time slot), RTT, bandwidth-delay product,
+utilization percentage.

@@ -1,0 +1,9 @@
+Implement 1-persistent, non-persistent and p-persistent CSMA techniques.
+In this assignment, you have to implement 1-persistent, non-persistent 
+and p-persistent CSMA techniques. Measure the performance parameters 
+like throughput (i.e., average amount of data bits successfully 
+transmitted per unit time) and forwarding delay (i.e., average 
+end-to-end delay, including the queuing delay and the transmission delay) 
+experienced by the CSMA frames (IEEE 802.3). Plot the comparison graphs 
+for throughput and forwarding delay by varying p. State your observations 
+on the impact of performance of different CSMA techniques.

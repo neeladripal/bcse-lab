@@ -1,0 +1,352 @@
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 20
+Effective frames sent = 14
+Total time taken = 20 seconds
+Collision count = 0
+Throughput = 0.77032
+Forwarding Delay = 1.49548 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 23
+Effective frames sent = 14
+Total time taken = 31 seconds
+Collision count = 5
+Throughput = 0.51787
+Forwarding Delay = 2.22448 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 25
+Effective frames sent = 14
+Total time taken = 33 seconds
+Collision count = 7
+Throughput = 0.47567
+Forwarding Delay = 2.42185 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 32
+Effective frames sent = 14
+Total time taken = 52 seconds
+Collision count = 11
+Throughput = 0.30960
+Forwarding Delay = 3.72096 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 34
+Effective frames sent = 14
+Total time taken = 57 seconds
+Collision count = 10
+Throughput = 0.27943
+Forwarding Delay = 4.12269 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 37
+Effective frames sent = 14
+Total time taken = 62 seconds
+Collision count = 15
+Throughput = 0.25888
+Forwarding Delay = 4.44996 seconds/frame
+
+25Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 21
+Effective frames sent = 14
+Total time taken = 31 seconds
+Collision count = 5
+Throughput = 0.51067
+Forwarding Delay = 2.25585 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 31
+Effective frames sent = 14
+Total time taken = 54 seconds
+Collision count = 13
+Throughput = 0.29427
+Forwarding Delay = 3.91479 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 34
+Effective frames sent = 14
+Total time taken = 60 seconds
+Collision count = 17
+Throughput = 0.26573
+Forwarding Delay = 4.33520 seconds/frame
+
+Sender: sender#3 ----------------------- Receiver: receiver#3
+Total frames sent = 34
+Effective frames sent = 14
+Total time taken = 60 seconds
+Collision count = 20
+Throughput = 0.26483
+Forwarding Delay = 4.35000 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 17
+Effective frames sent = 14
+Total time taken = 13 seconds
+Collision count = 0
+Throughput = 1.21799
+Forwarding Delay = 0.94582 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 20
+Effective frames sent = 14
+Total time taken = 22 seconds
+Collision count = 6
+Throughput = 0.72411
+Forwarding Delay = 1.59091 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 21
+Effective frames sent = 14
+Total time taken = 30 seconds
+Collision count = 6
+Throughput = 0.52492
+Forwarding Delay = 2.19460 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 21
+Effective frames sent = 14
+Total time taken = 33 seconds
+Collision count = 7
+Throughput = 0.48268
+Forwarding Delay = 2.38665 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 23
+Effective frames sent = 14
+Total time taken = 39 seconds
+Collision count = 5
+Throughput = 0.40375
+Forwarding Delay = 2.85329 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 23
+Effective frames sent = 14
+Total time taken = 44 seconds
+Collision count = 4
+Throughput = 0.36620
+Forwarding Delay = 3.14579 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 19
+Effective frames sent = 14
+Total time taken = 22 seconds
+Collision count = 1
+Throughput = 0.72839
+Forwarding Delay = 1.58156 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 20
+Effective frames sent = 14
+Total time taken = 28 seconds
+Collision count = 1
+Throughput = 0.56541
+Forwarding Delay = 2.03745 seconds/frame
+
+Sender: sender#3 ----------------------- Receiver: receiver#3
+Total frames sent = 38
+Effective frames sent = 14
+Total time taken = 78 seconds
+Collision count = 16
+Throughput = 0.20485
+Forwarding Delay = 5.62364 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 38
+Effective frames sent = 14
+Total time taken = 88 seconds
+Collision count = 18
+Throughput = 0.18159
+Forwarding Delay = 6.34412 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 39
+Effective frames sent = 14
+Total time taken = 90 seconds
+Collision count = 18
+Throughput = 0.17822
+Forwarding Delay = 6.46410 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 26
+Effective frames sent = 14
+Total time taken = 60 seconds
+Collision count = 11
+Throughput = 0.26865
+Forwarding Delay = 4.28807 seconds/frame
+
+Sender: sender#4 ----------------------- Receiver: receiver#4
+Total frames sent = 31
+Effective frames sent = 14
+Total time taken = 81 seconds
+Collision count = 13
+Throughput = 0.19808
+Forwarding Delay = 5.81590 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 35
+Effective frames sent = 14
+Total time taken = 82 seconds
+Collision count = 13
+Throughput = 0.19549
+Forwarding Delay = 5.89292 seconds/frame
+
+Sender: sender#3 ----------------------- Receiver: receiver#3
+Total frames sent = 38
+Effective frames sent = 14
+Total time taken = 100 seconds
+Collision count = 19
+Throughput = 0.16067
+Forwarding Delay = 7.16986 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 46
+Effective frames sent = 14
+Total time taken = 105 seconds
+Collision count = 19
+Throughput = 0.15249
+Forwarding Delay = 7.55445 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 25
+Effective frames sent = 14
+Total time taken = 97 seconds
+Collision count = 5
+Throughput = 0.16582
+Forwarding Delay = 6.94724 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 33
+Effective frames sent = 14
+Total time taken = 137 seconds
+Collision count = 4
+Throughput = 0.11717
+Forwarding Delay = 9.83174 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 34
+Effective frames sent = 14
+Total time taken = 147 seconds
+Collision count = 3
+Throughput = 0.10967
+Forwarding Delay = 10.50444 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 28
+Effective frames sent = 14
+Total time taken = 113 seconds
+Collision count = 1
+Throughput = 0.14263
+Forwarding Delay = 8.07693 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 28
+Effective frames sent = 14
+Total time taken = 128 seconds
+Collision count = 3
+Throughput = 0.12550
+Forwarding Delay = 9.17953 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 24
+Effective frames sent = 14
+Total time taken = 70 seconds
+Collision count = 0
+Throughput = 0.22797
+Forwarding Delay = 5.05325 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 24
+Effective frames sent = 14
+Total time taken = 67 seconds
+Collision count = 2
+Throughput = 0.23858
+Forwarding Delay = 4.82855 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 33
+Effective frames sent = 14
+Total time taken = 112 seconds
+Collision count = 2
+Throughput = 0.14344
+Forwarding Delay = 8.03111 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 15
+Effective frames sent = 14
+Total time taken = 8 seconds
+Collision count = 0
+Throughput = 1.83005
+Forwarding Delay = 0.62949 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 18
+Effective frames sent = 14
+Total time taken = 25 seconds
+Collision count = 1
+Throughput = 0.62036
+Forwarding Delay = 1.85700 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 23
+Effective frames sent = 14
+Total time taken = 37 seconds
+Collision count = 5
+Throughput = 0.43489
+Forwarding Delay = 2.64894 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 20
+Effective frames sent = 14
+Total time taken = 45 seconds
+Collision count = 3
+Throughput = 0.35101
+Forwarding Delay = 3.28193 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 22
+Effective frames sent = 14
+Total time taken = 47 seconds
+Collision count = 6
+Throughput = 0.33683
+Forwarding Delay = 3.42013 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 25
+Effective frames sent = 14
+Total time taken = 52 seconds
+Collision count = 6
+Throughput = 0.30518
+Forwarding Delay = 3.77477 seconds/frame
+
+Sender: sender#2 ----------------------- Receiver: receiver#2
+Total frames sent = 25
+Effective frames sent = 14
+Total time taken = 65 seconds
+Collision count = 5
+Throughput = 0.56000
+Forwarding Delay = 4.66259 seconds/frame
+
+Sender: sender#1 ----------------------- Receiver: receiver#1
+Total frames sent = 30
+Effective frames sent = 14
+Total time taken = 72 seconds
+Collision count = 6
+Throughput = 0.46667
+Forwarding Delay = 5.20197 seconds/frame
+
+Sender: sender#3 ----------------------- Receiver: receiver#3
+Total frames sent = 27
+Effective frames sent = 14
+Total time taken = 75 seconds
+Collision count = 8
+Throughput = 0.51852
+Forwarding Delay = 5.39680 seconds/frame
+
+Sender: sender#0 ----------------------- Receiver: receiver#0
+Total frames sent = 34
+Effective frames sent = 14
+Total time taken = 85 seconds
+Collision count = 10
+Throughput = 0.41176
+Forwarding Delay = 6.07880 seconds/frame
+

@@ -1,0 +1,20 @@
+Test run with 3 senders--------------------
+Total packets sent = 104 per sender
+Total time taken = 5.483162 seconds
+Effective bandwidth = 56 bps
+Average Delay per packet = 0.052723 seconds
+
+
+Test run with 10 senders--------------------
+Total packets sent = 106 per sender
+Total time taken = 5.619176 seconds
+Effective bandwidth = 188 bps
+Average Delay per packet = 0.053011 seconds
+
+
+Test run with 17 senders--------------------
+Total packets sent = 106 per sender
+Total time taken = 5.623192 seconds
+Effective bandwidth = 320 bps
+Average Delay per packet = 0.053049 seconds
+

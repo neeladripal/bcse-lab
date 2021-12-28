@@ -1,0 +1,56 @@
+Sender: Holmes ----------------------- Receiver: Watson
+Total packets sent = 72
+Effective packets sent = 46
+Total time taken = 13 seconds
+Throughput = 2013 bps
+Utilization percentage = 50.33 %
+Transmission time = 0.28614 seconds/packet
+
+Sender: Holmes ----------------------- Receiver: Watson
+Total packets sent = 83
+Effective packets sent = 46
+Total time taken = 13 seconds
+Throughput = 2007 bps
+Utilization percentage = 50.20 %
+Transmission time = 0.28685 seconds/packet
+
+Sender: Holmes ----------------------- Receiver: Watson
+Total packets sent = 86
+Effective packets sent = 46
+Total time taken = 16 seconds
+Throughput = 1632 bps
+Utilization percentage = 40.82 %
+Transmission time = 0.35279 seconds/packet
+
+Sender: Watson ----------------------- Receiver: Holmes
+Total packets sent = 80
+Effective packets sent = 46
+Total time taken = 14 seconds
+Throughput = 1839 bps
+Utilization percentage = 45.99 %
+Transmission time = 0.31311 seconds/packet
+
+Sender: Holmes ----------------------- Receiver: Watson
+Total packets sent = 73
+Effective packets sent = 46
+Total time taken = 13 seconds
+Throughput = 1899 bps
+Utilization percentage = 47.49 %
+Transmission time = 0.30321 seconds/packet
+
+Sender: tester2 ----------------------- Receiver: tester1
+Total frames sent = 63
+Effective frames sent = 46
+Total time taken = 10 seconds
+Throughput = 2589 bps
+Utilization percentage = 64.74 %
+Transmission time = 0.22242 seconds/frame
+
+Sender: tester2 ----------------------- Receiver: tester1
+Total frames sent = 83
+Effective frames sent = 46
+Total time taken = 17 seconds
+Throughput = 1497 bps
+Utilization percentage = 37.43 %
+Transmission time = 0.38474 seconds/frame
+

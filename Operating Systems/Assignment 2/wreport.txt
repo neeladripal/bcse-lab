@@ -1,0 +1,10 @@
+Temperature: 50F
+Feels like: 46F
+Humidity: 82%
+Dew Point: 45F
+Wind: 9 mph ESE
+UV Index: N/AN/A
+Visibility: 5.0 mi
+Pressure: 29.63 in and steady
+Sunrise: 7:31 AM
+Sunset: 5:29 PM

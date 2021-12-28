@@ -1,0 +1,64 @@
+Sender: Tom ----------------------- Receiver: Jerry
+Total packets sent = 112
+Effective packets sent = 46
+Total time taken = 24 seconds
+Throughput = 1083 bps
+Utilization percentage = 27.08 %
+Transmission time = 0.53168 seconds/packet
+
+Sender: Tom ----------------------- Receiver: Jerry
+Total packets sent = 105
+Effective packets sent = 46
+Total time taken = 22 seconds
+Throughput = 1185 bps
+Utilization percentage = 29.63 %
+Transmission time = 0.48598 seconds/packet
+
+Sender: Tom ----------------------- Receiver: Jerry
+Total packets sent = 116
+Effective packets sent = 46
+Total time taken = 23 seconds
+Throughput = 1112 bps
+Utilization percentage = 27.82 %
+Transmission time = 0.51758 seconds/packet
+
+Sender: Jerry ----------------------- Receiver: Tom
+Total packets sent = 127
+Effective packets sent = 46
+Total time taken = 27 seconds
+Throughput = 973 bps
+Utilization percentage = 24.33 %
+Transmission time = 0.59197 seconds/packet
+
+Sender: Tom ----------------------- Receiver: Jerry
+Total packets sent = 123
+Effective packets sent = 46
+Total time taken = 24 seconds
+Throughput = 1094 bps
+Utilization percentage = 27.36 %
+Transmission time = 0.52637 seconds/packet
+
+Sender: tester2 ----------------------- Receiver: tester1
+Total packets sent = 130
+Effective packets sent = 46
+Total time taken = 27 seconds
+Throughput = 979 bps
+Utilization percentage = 24.49 %
+Transmission time = 0.58799 seconds/packet
+
+Sender: tester1 ----------------------- Receiver: tester1
+Total packets sent = 131
+Effective packets sent = 46
+Total time taken = 27 seconds
+Throughput = 952 bps
+Utilization percentage = 23.81 %
+Transmission time = 0.60477 seconds/packet
+
+Sender: tester2 ----------------------- Receiver: tester1
+Total frames sent = 99
+Effective frames sent = 46
+Total time taken = 18 seconds
+Throughput = 1457 bps
+Utilization percentage = 36.45 %
+Transmission time = 0.39510 seconds/frame
+
