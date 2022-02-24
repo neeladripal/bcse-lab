@@ -52,4 +52,11 @@
 *.pyc
 
 # Qt user files
-*.user 
+*.user
+
+# Lex compiled files
+lex.yy.c
+
+# Byacc compiled files
+*.tab.h
+*.tab.c 
