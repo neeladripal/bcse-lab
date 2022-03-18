@@ -60,3 +60,6 @@ lex.yy.c
 # Byacc compiled files
 *.tab.h
 *.tab.c 
+
+# VsCode files
+.vscode/
