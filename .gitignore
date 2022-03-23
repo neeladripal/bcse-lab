@@ -66,3 +66,6 @@ lex.yy.c
 
 # Settings files
 .settings/
+
+# Deployment Descriptor
+web.xml
