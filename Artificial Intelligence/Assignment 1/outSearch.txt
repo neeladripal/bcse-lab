@@ -1,2 +1,0 @@
-
-Enter no of rows and columns: 
