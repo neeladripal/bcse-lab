@@ -63,3 +63,6 @@ lex.yy.c
 
 # VsCode files
 .vscode/
+
+# Settings files
+.settings/
